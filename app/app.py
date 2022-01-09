@@ -21,10 +21,12 @@ file = st.sidebar.file_uploader("Please Upload Mp3 Audio File Here or Use Demo O
 
 # Configuration
 image_size = (100, 100)
-song_duration = 30
+song_duration = 3
 color_mode = "rgba"  # rgb or rgba
 model_path = "model.h5"  # Path for your model
+
 class_labels = ['blues', 'classical', 'country', 'disco', 'pop', 'hiphop', 'metal', 'reggae', 'rock', 'jazz']
+# class_labels = ['blues', 'classical', 'country', 'disco', 'hiphop', 'metal', 'pop', 'reggae', 'rock', 'jazz']
 
 
 # class_labels = ['blues', 'country', 'hiphop', 'jazz']

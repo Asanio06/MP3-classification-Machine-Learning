@@ -69,7 +69,7 @@ def load_training_dataset(dataset_location='./dataset/',
 
 
 if __name__ == "__main__":
-    class_labels = ['blues', 'classical', 'country', 'disco', 'hiphop', 'metal', 'pop', 'reggae', 'rock', 'jazz']
+    class_labels = ['blues', 'classical', 'country', 'disco', 'pop', 'hiphop', 'metal', 'reggae', 'rock', 'jazz']
 
     image_size = (150, 200) # TODO: CONFIGURE
     (X, Y) = load_training_dataset(dataset_location='./images', image_size=image_size)
