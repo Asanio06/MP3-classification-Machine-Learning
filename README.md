@@ -2,7 +2,7 @@
 
 Il s'agit d'un projet étudiant visant à créer un modèle d'IA capable de reconnaitre le genre d'une musique à partir du spectrogramme mel issue d'un extrait de cette musique.
 
-## Participant
+## Participants
 - BOISSAY Eve 
 - DIOMANDE Lansana 
 - LE NET Laurine
