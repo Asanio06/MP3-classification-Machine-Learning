@@ -1,6 +1,6 @@
 # <div align="center"> Projet IA sur la classification de musique<div>
 
-Il s'agit d'un projet étudiant visant à créer un modèle d'IA capable de reconnaitre le genre d'une musique à partir du spectrogramme mel issue d'un extrait de cette musique.
+Il s'agit d'un projet étudiant visant à créer un modèle d'IA capable de reconnaitre le genre d'une musique à partir du spectrogramme Mel issu d'un extrait de cette musique.
 
 ## Participants
 - BOISSAY Eve 
