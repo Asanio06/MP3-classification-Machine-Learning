@@ -24,7 +24,7 @@ image_size = (100, 100)
 song_duration = 30
 color_mode = "rgba"  # rgb or rgba
 model_path = "model.h5"  # Path for your model
-class_labels = ['blues', 'classical', 'country', 'disco', 'hiphop', 'metal', 'pop', 'reggae', 'rock', 'jazz']
+class_labels = ['blues', 'classical', 'country', 'disco', 'pop', 'hiphop', 'metal', 'reggae', 'rock', 'jazz']
 
 
 # class_labels = ['blues', 'country', 'hiphop', 'jazz']
@@ -65,13 +65,13 @@ def create_melspectrogram(wav_file):
 def predict(image_data, model):
     image = img_to_array(image_data) / 255.0
     image = np.reshape(image, (
-    1, image_size[0], image_size[1], 3 if color_mode == "rgb" else 4))  # TODO :  en fonction de son model
+        1, image_size[0], image_size[1], 3 if color_mode == "rgb" else 4))  # TODO :  en fonction de son model
 
     prediction = model.predict(image)
     top2_index = np.argpartition(prediction, -2, axis=1)[:, -2:]
     prediction = prediction.reshape((len(class_labels),))  # TODO: En fonction du nombre de class
     class_label = np.argmax(prediction)
-    return class_label, prediction , top2_index[0]
+    return class_label, prediction, top2_index[0]
 
 
 if file is None:
@@ -83,19 +83,13 @@ else:
     image_data = load_img('melspectrogram.png', color_mode=color_mode,
                           target_size=image_size)
 
-    model = keras.models.load_model(
-        model_path, custom_objects={
-            "get_f1": get_f1})
-
-    class_label, prediction , top2_index = predict(image_data, model)
-    st.write(f"## The Genre of Song is {class_labels[top2_index[0]]}  "
-             f"or  {class_labels[top2_index[1]]} ")
-
-    #CHART BAR POUR LA DISTRIBUTION DE PROBABILITES
+    model = keras.models.load_model(model_path, custom_objects={"get_f1": get_f1})
+    class_label, prediction, top2_index = predict(image_data, model)
+    st.write(f"## The Genre of Song is {class_labels[top2_index[0]]} or  {class_labels[top2_index[1]]} ")
     fig = plt.figure()
-    ax = fig.add_axes([0,0,1,1])
+    ax = fig.add_axes([0, 0, 1, 1])
     genre = [class_labels[top2_index[0]], class_labels[top2_index[1]]]
     proba = [prediction[top2_index[0]] * 100, prediction[top2_index[1]] * 100]
-    ax.bar(genre,proba, color=['red','blue'])
+    ax.bar(genre, proba, color=['red', 'blue'])
     ax.legend(['Probabilités en %'])
     st.pyplot(fig)
