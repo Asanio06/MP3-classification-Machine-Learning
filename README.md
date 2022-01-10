@@ -74,4 +74,4 @@ Il suffit d'ouvrir le fichier dans un éditeur de texte et d'adapter la section 
 
 ## Remerciements
 
-Merci à **Lénonard BENEDETTI** pour toute l'aide apportée.
+Merci à **Léonard BENEDETTI** pour toute l'aide apportée.
