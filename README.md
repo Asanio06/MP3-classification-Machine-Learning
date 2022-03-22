@@ -38,7 +38,7 @@ Exemple:
 - model_78_288x432x4_n2.h5 => accuracy: 78% , Image: 288x432 en rgba
 
 ## Application
-Le fichier `./app/app.py` permet de lancer une application développée avec le framework streamlit. Cette application permet à l'utilisateur de glisser un morceaux en mp3 et lui retourne les 2 genres musicaux qui ont le plus de chance de correspondre à celui du morceau. Une version est en ligne au lien <a href="http://music-classif.partage2passion.fr/">suivant</a>
+Le fichier `./app/app.py` permet de lancer une application développée avec le framework streamlit. Cette application permet à l'utilisateur de glisser un morceaux en mp3 et lui retourne les 2 genres musicaux qui ont le plus de chance de correspondre à celui du morceau. Une version est en ligne au lien <a href="http://music-classif.partage2passion.fr/">suivant</a> (lien indisponible. En effet il la période d'essai avec Azure est fini 🙂)
 
 ### <div align="center"> Lancement avec Docker <div>
 
