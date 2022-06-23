@@ -23,7 +23,7 @@ En utilisant les fichier **generation_dataset_method_***, ​vous pouvez découp
 Dans le dossier training, vous trouverez les différents scripts qui nous ont permis de générer nos divers modèles.
 Vous pouvez les importer dans les fichiers train_model_method_1  et train_model_method_2 et utiliser la méthode `getModel` pour obtenir le modèle à entrainer.
 
-**Utilisation de réseaux convolutif 2D**
+**Utilisation de réseaux convolutifs 2D**
 Il y a deux fichiers disponibles pour l'entrainement du modèle. 
 - train_model_method_1 : Celui-ci utilise ImageDataGenerator pour donner les images au modèle afin de permettre l'entrainement et le test. L'avantage est que celui-ci n'est pas très consommateur en ressource. Le désavantage est que celui-ci prend plus de temps.
 - train_model_method_2 : Celui-ci utilise image_dataset_from_directory pour récupérer les images qui seront ensuite transmises au modèle afin de permettre son entrainement et le test. Il est plus rapide mais aussi plus consommateur en ressource. Parfois, celui-ci ne permettra pas d'entrainer un modèle si la taille des images est trop grande.
